@@ -1,0 +1,25 @@
+From 0d0411e4da572417fe8e73be7ecf1eeb628fcb18 Mon Sep 17 00:00:00 2001
+From: Nanhumly <1607616422@qq.com>
+Date: Thu, 16 Feb 2023 04:14:00 +0000
+Subject: [PATCH] Avoid build error
+
+Change-Id: I5fd725d6ebfc73012000d4aa40b33cad7b9e008e
+---
+ usb/gadget/1.1/default/Android.bp | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/usb/gadget/1.1/default/Android.bp b/usb/gadget/1.1/default/Android.bp
+index 789a4f0c2..9e5468e4d 100644
+--- a/usb/gadget/1.1/default/Android.bp
++++ b/usb/gadget/1.1/default/Android.bp
+@@ -28,7 +28,6 @@ cc_binary {
+     defaults: ["hidl_defaults"],
+     relative_install_path: "hw",
+     init_rc: ["android.hardware.usb.gadget@1.1-service.rc"],
+-    vintf_fragments: ["android.hardware.usb.gadget@1.1-service.xml"],
+     vendor: true,
+     srcs: [
+         "service.cpp",
+-- 
+2.32.0
+
